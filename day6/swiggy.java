@@ -16,7 +16,8 @@ class RideBooking extends User
     String vehicletype;
     RideBooking(String name, int phoneno, String location, String vehicletype)
     {
-        super(name,phoneno,location);
+                super(name,phoneno,location);
+
         this.vehicletype=vehicletype;
     }
     void displayinfo()
@@ -66,7 +67,7 @@ class FoodDelivery extends User
 
 
 
-public class task2 {
+public class swiggy {
     public static void main(String[] args) {
         User u=new User("DAVID",1234567890,"HYDERABAD");
         RideBooking r=new RideBooking("CAR", 0, null, null);
