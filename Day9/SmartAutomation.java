@@ -5,7 +5,7 @@ class Automation {
         this.Motion = Motion;
         this.time = time;
         this.temp = temp;
-        conditions c = new conditions(new Automation(Motion, time, temp));
+        conditions c = new conditions(this);
         c.motionlight();
         c.clocklight();
         c.tempAC();

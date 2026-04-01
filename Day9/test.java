@@ -2,11 +2,13 @@ class test{
     public static int[] sub(int[] a){
         int max=-1,im=0,jm=0;
         for (int i=0;i<a.length;i++){
-            int c=0,count=0;
+            int c=0;
+            int count=0;
             for(int j=i;j<a.length;j++){
                 if(a[j]==1) c++;
                 else c--;
-                if(j>i+1 && c==1){
+                count++;
+                if (c == 1){
                     if(max<count){
                         max=count;
                         im=i;
@@ -15,9 +17,10 @@ class test{
                 }
             }
         }
+        if (max==-1) return new int[0];
         int k=0;
         int[] arr= new int[max];
-        for(int i=im;i<jm;i++){
+        for(int i=im;i<=jm;i++){
             arr[k++]=a[i];
         }
         return arr;
